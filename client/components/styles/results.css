@@ -1,0 +1,60 @@
+.listitem{
+	display: block;
+	height: 200px;
+	margin-bottom: 5px;
+	box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.41);
+	font-family: "Titillium Web";
+	position: relative;
+}
+
+.listitem .imgcontainer {
+	height: 100%;
+	max-width: 300px;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.imgcontainer img {
+	width: 100%;
+	height: auto;
+}
+
+.details {
+	width: calc(100% - 320px);
+	/*float: right;*/
+	position: absolute;
+	right: 10px;
+	top: 0px;
+	height: 100%;
+}
+
+
+.primary-left {
+	width: 60%;
+	display: inline-block;
+}
+
+.primary-left .title{
+	font-weight: 600;
+	font-size: 21px
+}
+
+.primary-left .mileage{
+	font-size: 16px;
+}
+
+.primary-right {
+	width: 40%;
+	display: inline-block;
+	text-align: right;
+	float: right;
+}
+
+.primary-details {
+	padding-bottom: 70px;
+}
+
+/*.secondary-details {
+	position: absolute;
+	bottom: 0px;
+}*/
