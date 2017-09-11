@@ -34,7 +34,7 @@
   url('https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/cars/18_mst_segment_landing_32.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg') no-repeat;
   background-size: 100%;
   width: 100%;
-  height: 3000px;
+  height: 100vh;
 }
 
 .noUi-connect {
