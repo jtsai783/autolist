@@ -19,11 +19,38 @@ export function gotCars(json){
 	}
 }
 
-export function doSearch(){
+export function nextPage(){
+	return {
+		type: "NEXT_PAGE"
+	}
+}
+
+export function prevPage(){
+	return {
+		type: "PREV_PAGE"
+	}
+}
+
+export function selectCar(resultId){
+	return {
+		type: "SELECT_CAR",
+		resultId
+	}
+}
+
+export function setFilter(min, max){
+	return {
+		type: "SET_FILTER",
+		min,
+		max
+	}
+}
+
+export function doSearch(pageNum, min, max){
 	return function(dispatch){
 		dispatch(getCars());
 
-		return fetch('https://autolist-test.herokuapp.com/search?page=1')
+		return fetch(`https://autolist-test.herokuapp.com/search?page=${pageNum}&price_min=${min}&price_max=${max}`)
 			.then(
 				response => response.json(),
 				error => console.log("error occured doing search")

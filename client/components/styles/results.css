@@ -7,14 +7,14 @@
 	position: relative;
 }
 
-.listitem .imgcontainer {
+.listitem > .imgcontainer {
 	height: 100%;
 	max-width: 300px;
 	overflow: hidden;
 	display: inline-block;
 }
 
-.imgcontainer img {
+.imgcontainer > img {
 	width: 100%;
 	height: auto;
 }
@@ -34,12 +34,12 @@
 	display: inline-block;
 }
 
-.primary-left .title{
+.primary-left > .title{
 	font-weight: 600;
 	font-size: 21px
 }
 
-.primary-left .mileage{
+.primary-left > .mileage{
 	font-size: 16px;
 }
 

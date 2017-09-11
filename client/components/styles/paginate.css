@@ -1,0 +1,27 @@
+.paginatebuttons {
+	height: 50px;
+	line-height: 50px;
+	box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.41);
+	font-family: "Titillium Web";
+	text-align: center;
+	cursor: pointer;
+}
+
+.prevbtn {
+	width: 50%;
+	display: inline-block;
+	float: left;
+	color: rgb(227, 230, 234);
+	cursor: default;
+}
+
+.nextbtn {
+	width: 50%;
+	display: inline-block;
+	float: right;
+}
+
+.enabled {
+	color: black;
+	cursor: pointer;
+}

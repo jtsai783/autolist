@@ -1,9 +1,13 @@
 import React from 'react';
+import Paginate from '../container/paginate.jsx'
+import { withRouter } from 'react-router-dom';
+import { selectCar } from '../../actions.jsx';
+import { connect } from 'react-redux'
 import '../styles/results.css'
 
 
-const ListItem = ({item}) => (
-	<div className="listitem">
+const ListItem = ({item, history, selectCar }) => (
+	<div className="listitem" onClick={() => {history.push('/details'); selectCar(item.id)}}>
 		<div className="imgcontainer">
 			<img className="primary-photo" src={item.primary_photo_url} />
 		</div>
@@ -26,15 +30,28 @@ const ListItem = ({item}) => (
 	</div>
 )
 
+const ListItemWithRouter = withRouter(ListItem);
+
+const mapDispatchToProp = dispatch => {
+	return {
+		selectCar: (resultsId) => {
+			dispatch(selectCar(resultsId));
+		}
+	}
+}
+
+const SelectListItemWithRouter = connect(null, mapDispatchToProp)(ListItemWithRouter);
+
 const Results = ({ results }) => {
 
 	const listItems = results.map((result) => (
-		<ListItem key={result.id} item={result} />
+		<SelectListItemWithRouter key={result.id} item={result} />
 	));
 
 	return (
-		<div>
+		<div style={{maxWidth: '1000px', margin: 'auto'}}>
 			{listItems}
+			<Paginate />
 		</div>
 	)
 }
