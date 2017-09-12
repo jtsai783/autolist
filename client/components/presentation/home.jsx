@@ -21,6 +21,7 @@ class Home extends React.Component {
 		var minPrice = parseInt(val[0].substring(2));
 		var maxPrice = parseInt(val[1].substring(2));
 		this.props.setFilter(minPrice, maxPrice);
+		this.props.resetPage();
 		this.props.searchClick(minPrice, maxPrice);
 		this.nextPath('/results');
 	}

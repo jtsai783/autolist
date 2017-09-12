@@ -1,6 +1,6 @@
 import Home from '../presentation/home.jsx'
 import { connect } from 'react-redux'
-import { doSearch, setFilter } from '../../actions.jsx'
+import { doSearch, setFilter, resetPage } from '../../actions.jsx'
 
 const mapStateToProps = state => {
 	return {
@@ -15,6 +15,9 @@ const mapDispatchToProps = dispatch => {
 		},
 		searchClick: (min, max) => {
 			dispatch(doSearch(1, min, max));
+		},
+		resetPage: () => {
+			dispatch(resetPage());
 		}
 	}
 }

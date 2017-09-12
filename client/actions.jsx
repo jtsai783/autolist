@@ -31,6 +31,12 @@ export function prevPage(){
 	}
 }
 
+export function resetPage(){
+	return {
+		type: "RESET_PAGE"
+	}
+}
+
 export function selectCar(resultId){
 	return {
 		type: "SELECT_CAR",

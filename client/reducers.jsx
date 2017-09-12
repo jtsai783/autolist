@@ -31,6 +31,8 @@ function page(state = 1, action){
 			return state + 1;
 		case "PREV_PAGE":
 			return state - 1;
+		case "RESET_PAGE":
+			return 1;
 		default:
 			return state;
 	}
